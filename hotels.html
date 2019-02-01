@@ -20,29 +20,70 @@
     </header>
     <main class="container">
       <h1 class="visually-hidden">Отели города Седона, Аризона</h1>
-      <section class="filter">
-        <h2 class="visually-hidden">Фильтр отелей</h2>
-        <!-- Здесь будет форма -->
+      <section class="filters">
+        <h2 class="visually-hidden">Подбор отелей по параметрам</h2>
+        <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <ul class="filter">
+              <li class="filter__option">
+                <input class="visually-hidden filter__input filter__input_checkbox" type="checkbox" name="pool" id="pool">
+                <label for="pool">Бассейн</label>
+              </li>
+              <li class="filter__option">
+                <input class="visually-hidden filter__input filter__input_checkbox" type="checkbox" name="parking" id="parking">
+                <label for="parking">Парковка</label>
+              </li>
+              <li class="filter__option">
+                <input class="visually-hidden filter__input filter__input_checkbox" type="checkbox" name="wifi" id="wifi">
+                <label for="wifi">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <ul class="filter">
+              <li class="filter__option">
+                <input class="visually-hidden filter__input filter__input_checkbox" type="checkbox" name="hotel" id="hotel">
+                <label for="hotel">Отель</label>
+              </li>
+              <li class="filter__option">
+                <input class="visually-hidden filter__input filter__input_checkbox" type="checkbox" name="motel" id="motel">
+                <label for="motel">Мотель</label>
+              </li>
+              <li class="filter__option">
+                <input class="visually-hidden filter__input filter__input_checkbox" type="checkbox" name="apartment" id="apartment">
+                <label for="apartment">Квартира</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Стоимость в сутки (₽):</legend>
+            <input type="range" min="0" max="3000" value="1000" step="100" class="filter__slider" id="filter-price">
+          </fieldset>
+          <button class="filter__button button" type="submit">Показать
+          </button>
+        </form>
       </section>
       <section class="search-results">
         <h2 class="visually-hidden">Список отелей Седоны</h2>
         <ul class="hotels">
           <li class="hotels__item hotel-single">
-            <p class="hotel-single__image">
-              <a href="#">
-                <img src="img/hotel_amara-resort.jpg" width="135" height="90" alt="Отель Amara Resort & Spa" />
-              </a>
-            </p>
-            <h3>
-              <a href="#">Amara Resort & Spa</a>
-            </h3>
+            <a href="#">
+              <p class="hotel-single__image">
+                  <img src="img/hotel_amara-resort.jpg" width="135" height="90" alt="Отель Amara Resort & Spa" />
+              </p>
+              <h3>
+                Amara Resort & Spa
+              </h3>
+            </a>
             <span class="hotel-single__type">Гостиница</span>
-            <span class="hotel-single__price">от 4000 Р.</span>
-            <p class="button">
-              <a href="#" class="button__learn-more">Подробнее</a>
-              <a href="#" class="button__book">Забронировать</a>
+            <span class="hotel-single__price">от 4000 ₽</span>
+            <p class="hotel-single__buttons">
+              <a href="#" class="hotels__button button_learn-more">Подробнее</a>
+              <a href="#" class="hotels__button button_book">Забронировать</a>
             </p>
-            <div class="rating">
+            <div class="hotel-single__rating rating">
               <ul class="rating__hotel-stars">
                 <li>⭑</li>
                 <li>⭑</li>
@@ -53,21 +94,21 @@
             </div>
           </li>
           <li class="hotels__item hotel-single">
-            <p class="hotel-single__image">
-              <a href="#">
-                <img src="img/hotel_desert-quail.jpg" width="135" height="90" alt="Мотель Desert Quail Inn" />
-              </a>
-            </p>
-            <h3>
-              <a href="#">Desert Quail Inn</a>
-            </h3>
+            <a href="#">
+              <p class="hotel-single__image">
+                  <img src="img/hotel_desert-quail.jpg" width="135" height="90" alt="Мотель Desert Quail Inn" />
+              </p>
+              <h3>
+                Desert Quail Inn
+              </h3>
+            </a>
             <span class="hotel-single__type">Мотель</span>
-            <span class="hotel-single__price">от 3000 Р.</span>
-            <p class="button">
-              <a href="#" class="button__learn-more">Подробнее</a>
-              <a href="#" class="button__book">Забронировать</a>
+            <span class="hotel-single__price">от 3000 ₽</span>
+            <p class="hotel-single__buttons">
+              <a href="#" class="hotels__button button_learn-more">Подробнее</a>
+              <a href="#" class="hotels__button button_book">Забронировать</a>
             </p>
-            <div class="rating">
+            <div class="hotel-single__rating rating">
               <ul class="rating__hotel-stars">
                 <li>⭑</li>
                 <li>⭑</li>
@@ -77,21 +118,21 @@
             </div>
           </li>
           <li class="hotels__item hotel-single">
-            <p class="hotel-single__image">
-              <a href="#">
-                <img src="img/hotel_poco-diablo.jpg" width="135" height="90" alt="Апартаменты Villas at Poco Diablo" />
-              </a>
-            </p>
-            <h3>
-              <a href="#">Villas at Poco Diablo</a>
-            </h3>
+            <a href="#">
+              <p class="hotel-single__image">
+                  <img src="img/hotel_poco-diablo.jpg" width="135" height="90" alt="Апартаменты Villas at Poco Diablo" />
+              </p>
+              <h3>
+                Villas at Poco Diablo
+              </h3>
+            </a>
             <span class="hotel-single__type">Апартаменты</span>
-            <span class="hotel-single__price">от 2000 Р.</span>
-            <p class="button">
-              <a href="#" class="button__learn-more">Подробнее</a>
-              <a href="#" class="button__book">Забронировать</a>
+            <span class="hotel-single__price">от 2000 ₽</span>
+            <p class="hotel-single__buttons">
+              <a href="#" class="hotels__button button_learn-more">Подробнее</a>
+              <a href="#" class="hotels__button button_book">Забронировать</a>
             </p>
-            <div class="rating">
+            <div class="hotel-single__rating rating">
               <ul class="rating__hotel-stars">
                 <li>⭑</li>
                 <li>⭑</li>
