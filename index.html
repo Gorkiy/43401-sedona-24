@@ -20,9 +20,9 @@
     </header>
     <main class="container">
       <h1 class="visually-hidden">Город Седона, штат Аризона</h1>
-      <section class="intro">
+      <div class="intro">
         <img src="welcome.png" width="458" height="352" alt="Добро пожаловать в Седону" />
-      </section>
+      </div>
       <section class="about">
         <h2 class="visually-hidden">О Седоне</h2>
         <b>Седона — небольшой городок в Аризоне, заслуживающий большего! </b>
@@ -74,7 +74,32 @@
         <b>Заинтересовались?</b>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <h3>Поиск гостиницы в седоне</h3>
-        <!-- Здесь будет форма бронирования-->
+        <div class="form-container">
+          <form class="booking-form" method="post" action="https://echo.htmlacademy.ru">
+            <span class="book-input">
+              <label for="date-checkin">Дата заезда:</label>
+              <input class="book-input__date" type="text" id="date-checkin" name="date-checkin" value="2 февраля 2019">
+            </span>
+            <span class="book-input">
+              <label for="date-checkout">Дата выезда:</label>
+              <input class="book-input__date" type="text" id="date-checkout" name="date-checkout" placeholder="9 февраля 2019">
+            </span>
+            <span class="book-input">
+              <label for="adults">Взрослые:</label>
+              <button class="book-input__button" type="button">-</button>
+              <input class="book-input__quantity" type="number" step="1" min="1" value="1" name="adults" id="adults">
+              <button class="book-input__button" type="button">+</button>
+            </span>
+            <span class="book-input">
+              <label for="children">Дети:</label>
+              <button class="book-input__button" type="button">-</button>
+              <input class="book-input__quantity" type="number" step="1" min="0" value="0" name="children" id="children">
+              <button class="book-input__button" type="button">+</button>
+            </span>
+            <button class="booking-form__button button" type="submit">Найти
+            </button>
+          </form>
+        </div>
       </section>
     </main>
     <footer class="main-footer">
