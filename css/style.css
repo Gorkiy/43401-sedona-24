@@ -1,0 +1,344 @@
+body {
+  padding: 0;
+  background-color: #F2F2F2;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu a {
+  color: #000;
+}
+
+.menu a:hover {
+  color: #81B3D2;
+}
+
+.menu a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.menu-item-current a {
+  color: #766357;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+}
+
+.container,
+.main-navigation,
+.main-footer {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+}
+
+.intro {
+  position: relative;
+  height: 500px;
+  background-color: black;
+  background: url("../img/hero_bg-bottom.png") no-repeat bottom,
+              url("../img/hero_bg.jpg") no-repeat 50% 22%,
+              #205778;
+}
+
+.intro img {
+  display: block;
+  margin: 0 auto;
+  padding-top: 75px;
+}
+
+.lead {
+  padding: 58px 0 50px 0;
+  text-align: center;
+}
+
+.lead b {
+  margin-top: 57px;
+  color: #000;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.lead p {
+  margin-top: 31px;
+}
+
+/* Features */
+.features,
+.icon-features {
+  list-style: none;
+  padding: 0;
+}
+
+.features__item {
+  text-align: center;
+}
+
+.features__item_grey {
+  background-color: #eee;
+  padding: 45px;
+}
+
+.features__item h3 {
+  color: #000;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.hero-feature {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.hero-feature__content {
+  width: 30%;
+  padding: 45px;
+  background-color: #81B3D2;
+  color: #fff;
+}
+
+.hero-feature__content h3 {
+  color: #fff;
+}
+
+.hero-feature__bg {
+  width: 70%;
+}
+
+.real-city {
+  background: url("../img/feature_photo-real-city.jpg") no-repeat center/cover;
+}
+
+.diablo-bridge {
+  background: url("../img/feature_photo-diablo-bridge.jpg") no-repeat center/cover;
+}
+/* Features: Icon features */
+.icon-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+}
+
+.icon-features__item {
+  padding: 50px;
+  padding-top: 120px;
+}
+
+.icon-features__item.icon-living {
+  background: url("../img/feature_icon-house.png") no-repeat 50% 50px;
+}
+
+.icon-features__item.icon-food {
+  background: url("../img/feature_icon-food.png") no-repeat 50% 50px;
+}
+
+.icon-features__item.icon-gift {
+  background: url("../img/feature_icon-gift.png") no-repeat 50% 50px;
+}
+
+/* Booking */
+.booking {
+  margin: 55px auto;
+  text-align: center;
+}
+
+.booking b {
+  font-size: 30px;
+  line-height: 46px;
+}
+
+.booking-header {
+  margin: 0 auto;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.booking-header a {
+  display: inline-block;
+  margin-top: 35px;
+  width: 550px;
+  padding: 35px 0;
+  color: #fff;
+  background-color: #766357;
+}
+
+.booking-header a:hover {
+  background-color: #604E43;
+}
+
+.booking-header a:active {
+  background-color: #503E33;
+  color: rgba(255, 255, 255, .3);
+}
+
+.form-container {
+  height: 500px;
+  background: url("../img/map.jpg") no-repeat center/cover;
+}
+
+.booking-form {
+  width: 550px;
+  padding: 55px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0px 7px 15px rgba(0, 0, 0, .15);
+}
+
+.book-input {
+  text-align: left;
+  display: block;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.book-input label {
+  display: inline-block;
+  text-align: left;
+  margin-left: 0;
+  width: 100px;
+  margin: 0;
+}
+
+.book-input input {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 320px;
+}
+
+.book-input input:hover {
+  background-color: #EBEBEB;
+}
+
+.book-input input:focus {
+  background-color: #fff;
+  border: 2px solid #E5E5E5 inset;
+}
+
+.book-input input,
+.book-input button {
+  height: 38px;
+  background-color: #F2F2F2;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0 0 0 13px;
+}
+
+.book-input button {
+  width: 38px;
+  padding: 0;
+  margin-right: -4px;
+  margin-left: -4px;
+  color: #A9A9A9;
+}
+
+.book-input button:hover {
+  color: #000;
+}
+
+.book-input button:active {
+  color: #81B3D2;
+}
+
+.book-input__date {
+  background: url("../img/booking_icon-calendar.png") no-repeat 97% 50%;
+}
+
+.book-input__date:hover {
+  background: url("../img/booking_icon-calendar_hover.png") no-repeat 97% 50%;
+}
+
+.book-input__date:focus {
+  background: url("../img/booking_icon-calendar_focus.png") no-repeat 97% 50%;
+}
+
+.book-input .book-input__quantity {
+  width: 38px;
+}
+
+.two-columns {
+  display: inline-block;
+}
+
+.booking-form__button {
+  display: block;
+  width: 100%;
+  background-color: #81B3D2;
+  border: 0;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  padding: 15px 0;
+}
+
+.main-footer {
+  color: #000;
+  background-color: #fff;
+}
+
+.social ul {
+  list-style: none;
+  text-align: center;
+}
+
+.social__button {
+  display: inline-block;
+  background-color: #81B3D2;
+  width: 48px;
+  height: 48px;
+}
+
+.hashtag {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.copyright {
+  text-align: right;
+}
+
+.academy-link {
+  content: url("../img/logo-htmlacademy.png");
+}
+
+.academy-link:hover {
+  content: url("../img/logo-htmlacademy_hover.png");
+}
+
+.academy-link:active {
+  content: url("../img/logo-htmlacademy_active.png");
+}
+
+/* Стили страницы отелей */
+.filter-form fieldset {
+  border: none;
+}
