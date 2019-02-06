@@ -299,6 +299,7 @@ a {
   padding: 15px 0;
 }
 
+/* Футер */
 .main-footer {
   color: #000;
   background-color: #fff;
@@ -307,6 +308,13 @@ a {
 .social ul {
   list-style: none;
   text-align: center;
+}
+
+.social li {
+  display: inline;
+  list-style: none;
+  text-align: center;
+  margin: 3px;
 }
 
 .social__button {
@@ -339,6 +347,234 @@ a {
 }
 
 /* Стили страницы отелей */
+
+.filters {
+  background: url("../img/filter_bg.jpg") no-repeat center/cover;
+  padding: 30px 0 0 70px;
+}
+
 .filter-form fieldset {
+  display: inline-block;
   border: none;
+  color: #fff;
+}
+
+.filter-form legend {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
+.filter {
+  list-style: none;
+  line-height: 36px;
+  padding: 0;
+}
+
+.filter__button {
+  background: none;
+  font-size: 14px;
+  line-height: 21px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 7px 35px;
+  border: 2px solid #fff;
+}
+
+.filter__button:hover {
+  background: #fff;
+  color: #000;
+  text-transform: uppercase;
+  padding: 7px 35px;
+  border: 2px solid #fff;
+}
+
+/* Сортировка по результатам */
+.filter-sort {
+  position: relative;
+  padding: 38px 0 38px 70px;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.sort-type {
+  display: inline;
+  list-style: none;
+}
+
+.sort-type li {
+  display: inline;
+  margin-right: 50px;
+}
+
+.sort-type__item a {
+  font-size: 12px;
+  line-height: 18px;
+  color: #B1B1B1;
+  text-decoration: underline;
+}
+
+.sort-type__item a:hover {
+  color: #81B3D2;
+}
+
+.sort-type__item a:active {
+  color: #000;
+  text-decoration: none;
+}
+
+.sort-type .sort-link-current {
+  text-decoration: none;
+  color: #81B3D2;
+}
+
+.filter-sort__found {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.filter-sort__header {
+  margin-left: 50px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.filter-sort__arrows {
+  display: inline-block;
+  position: absolute;
+  right: 80px;
+}
+
+.filter-sort__arrows button {
+  background: transparent;
+  border: none;
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  margin-left: 10px;
+}
+
+.filter-sort__arrows .down-button {
+  background: url("../img/sort_down.png") no-repeat center/contain;
+}
+
+.filter-sort__arrows .down-button:hover {
+  background: url("../img/sort_down_hover.png") no-repeat center/contain;
+}
+
+.filter-sort__arrows .down-button:active {
+  background: url("../img/sort_down_active.png") no-repeat center/contain;
+}
+
+.filter-sort__arrows .up-button {
+  background: url("../img/sort_up.png") no-repeat center/contain;
+}
+
+.filter-sort__arrows .up-button:hover {
+  background: url("../img/sort_up_hover.png") no-repeat center/contain;
+}
+
+.filter-sort__arrows .up-button:active {
+  background: url("../img/sort_up_active.png") no-repeat center/contain;
+}
+
+.filter-sort__arrows .cur-active {
+  background: url("../img/sort_down_active.png") no-repeat center/contain;
+}
+
+/* Результаты поиска */
+
+.search-results {
+}
+
+.hotels {
+  list-style: none;
+  padding: 0;
+}
+
+.hotels__item {
+  position: relative;
+  padding: 30px 0;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.hotel-single__image {
+  display: inline;
+  padding-left: 70px;
+}
+
+.hotel-single > a {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000;
+}
+
+.hotel-single > a:hover {
+  color: #81B3D2;
+}
+
+.hotel-single > a:active {
+  color: #B2B2B2;
+}
+
+.hotel-single__rating {
+  display: inline-block;
+}
+
+.hotel-single__rating {
+  position: absolute;
+  right: 80px;
+  text-align: center;
+}
+
+.rating__hotel-stars {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+}
+
+.rating__hotel-stars li {
+  display: inline;
+}
+
+.rating__user-rating {
+  display: block;
+}
+
+.hotel-single__buttons {
+  display: inline-block;
+}
+
+.hotel-single__buttons a {
+  display: inline;
+  font-weight: 700;
+  color: #fff;
+  padding: 5px 15px;
+}
+
+.hotels__button_learn-more {
+  background-color: #81B3D2;
+}
+
+.hotels__button_learn-more:hover {
+  background-color: #669EC0;
+}
+
+.hotels__button_learn-more:active {
+  background-color: #5496BD;
+  color: rgba(255, 255, 255, .3);
+}
+
+.hotels__button_book {
+  background-color: #766357;
+}
+
+.hotels__button_book:hover {
+  background-color: #604E43;
+}
+
+.hotels__button_book:active {
+  background-color: #503E33;
+  color: rgba(255, 255, 255, .3);
 }
