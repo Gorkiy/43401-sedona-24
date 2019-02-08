@@ -3,66 +3,83 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-header__logo">
-          <img src="img/logo.png" width="138" height="71" alt="Логотип города Седона" />
-        </a>
         <ul class="menu">
-          <li><a href="info.html">Информация</a></li>
-          <li><a href="media.html">Фото и видео</a></li>
-          <li><a href="staff.html">Карта штата</a></li>
-          <li><a href="hotels.html">Гостиницы</a></li>
+          <li class="menu__item main-header__logo">
+            <a>
+              <img src="img/logo.png" width="138" height="71" alt="Логотип города Седона" />
+            </a>
+          </li>
+          <li class="menu__item"><a href="info.html">Информация</a></li>
+          <li class="menu__item"><a href="media.html">Фото и видео</a></li>
+          <li class="menu__item"><a href="staff.html">Карта штата</a></li>
+          <li class="menu__item"><a href="hotels.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
     <main class="container">
       <h1 class="visually-hidden">Город Седона, штат Аризона</h1>
       <div class="intro">
-        <img src="welcome.png" width="458" height="352" alt="Добро пожаловать в Седону" />
+        <img class="intro__welcome" src="img/hero_welcome.png" width="458" height="352" alt="Добро пожаловать в Седону" />
       </div>
       <section class="about">
-        <h2 class="visually-hidden">О Седоне</h2>
-        <b>Седона — небольшой городок в Аризоне, заслуживающий большего! </b>
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        <div class="lead">
+          <h2 class="visually-hidden">О Седоне</h2>
+          <p><b class="lead__define">Седона — небольшой городок в Аризоне, заслуживающий большего! </b></p>
+          <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        </div>
         <ol class="features">
-          <li class="features__item features__item-hero">
-            <h3>Настоящий <br>городок</h3>
-            <span>— №1 —</span>
-            <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+          <li class="features__item">
+            <div class="hero-feature">
+                <div class="hero-feature__content">
+                  <h3>Настоящий <br>городок</h3>
+                  <span>— №1 —</span>
+                  <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              </div>
+              <div class="hero-feature__bg real-city"></div>
+            </div>
             <ul class="icon-features">
-              <li class="icon-features__item">
-                <h3>Жилье</h3>
-                <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+              <li class="icon-features__item icon-living">
+                  <h3>Жилье</h3>
+                  <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
-              <li class="icon-features__item">
+              <li class="icon-features__item icon-food">
                 <h3>Еда</h3>
                 <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
-              <li class="icon-features__item">
+              <li class="icon-features__item icon-gift">
                 <h3>Сувениры</h3>
                 <p>Не только китайского, но и местного производства!</p>
               </li>
             </ul>
           </li>
-          <li class="features__item features__item-hero">
-            <h3>Там есть<br> Мост дьявола</h3>
-            <span>— №2 —</span>
-            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-          </li>
           <li class="features__item">
+            <div class="hero-feature">
+              <div class="hero-feature__bg diablo-bridge"></div>
+              <div class="hero-feature__content">
+                <h3>Там есть<br> Мост дьявола</h3>
+                <span>— №2 —</span>
+                <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+              </div>
+            </div>
+          </li>
+          <li class="features__item features__item_grey">
             <h3>Небольшая<br> площадь</h3>
             <span>— №3 —</span>
             <p>Все достопримечательности  находятся очень близко</p>
           </li>
-          <li class="features__item">
+          <li class="features__item features__item_grey">
             <h3>Красивая <br>дорога</h3>
             <span>— №4 —</span>
             <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li class="features__item">
+          <li class="features__item features__item_grey">
             <h3>Мало <br>туристов</h3>
             <span>— №5 —</span>
             <p>Большинство едет в гранд каньон и толпится там</p>
@@ -73,7 +90,9 @@
         <h2 class="visually-hidden">Бронирование гостиницы в Седоне</h2>
         <b>Заинтересовались?</b>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <h3>Поиск гостиницы в седоне</h3>
+        <h3 class="booking-header">
+          <a href="#">Поиск гостиницы в седоне</a>
+        </h3>
         <div class="form-container">
           <form class="booking-form" method="post" action="https://echo.htmlacademy.ru">
             <span class="book-input">
@@ -84,19 +103,21 @@
               <label for="date-checkout">Дата выезда:</label>
               <input class="book-input__date" type="text" id="date-checkout" name="date-checkout" placeholder="9 февраля 2019">
             </span>
-            <span class="book-input">
-              <label for="adults">Взрослые:</label>
-              <button class="book-input__button" type="button">-</button>
-              <input class="book-input__quantity" type="number" step="1" min="1" value="1" name="adults" id="adults">
-              <button class="book-input__button" type="button">+</button>
-            </span>
-            <span class="book-input">
-              <label for="children">Дети:</label>
-              <button class="book-input__button" type="button">-</button>
-              <input class="book-input__quantity" type="number" step="1" min="0" value="0" name="children" id="children">
-              <button class="book-input__button" type="button">+</button>
-            </span>
-            <button class="booking-form__button button" type="submit">Найти
+            <div class="two-columns">
+              <span class="book-input">
+                <label for="adults">Взрослые:</label>
+                <button class="book-input__button" type="button">-</button>
+                <input class="book-input__quantity" type="number" step="1" min="1" value="1" name="adults" id="adults">
+                <button class="book-input__button" type="button">+</button>
+              </span>
+              <span class="book-input">
+                <label for="children">Дети:</label>
+                <button class="book-input__button" type="button">-</button>
+                <input class="book-input__quantity" type="number" step="1" min="0" value="0" name="children" id="children">
+                <button class="book-input__button" type="button">+</button>
+              </span>
+            </div>
+            <button class="booking-form__button" type="submit">Найти
             </button>
           </form>
         </div>
