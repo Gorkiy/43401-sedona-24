@@ -20,6 +20,30 @@ a {
   text-decoration: none;
 }
 
+.container,
+.main-navigation,
+.main-footer {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, .15); */
+}
+
+/* Menu */
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu li {
+  display: inline;
+}
+
 .menu a {
   color: #000;
 }
@@ -32,25 +56,33 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.menu-item-current a {
+.menu li:nth-child(1) {
+  order: 3;
+}
+
+.menu li:nth-child(2) {
+  order: 1;
+}
+
+.menu li:nth-child(3) {
+  order: 2;
+}
+
+.menu li:nth-child(4) {
+  order: 4;
+}
+
+.menu li:nth-child(5) {
+  order: 5;
+}
+
+.menu .menu-item-current,
+.menu .menu-item-current:hover,
+.menu .menu-item-current:active {
   color: #766357;
 }
 
-.menu {
-  list-style: none;
-  margin: 0;
-}
-
-.container,
-.main-navigation,
-.main-footer {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: #fff;
-  /* box-shadow: 0 5px 15px rgba(0, 0, 0, .15); */
-}
-
+/* Landing Main content */
 .intro {
   min-height: 500px;
   background-color: black;
@@ -89,6 +121,11 @@ a {
   padding: 0;
 }
 
+.features {
+  display: flex;
+  flex-direction: column;
+}
+
 .features__item {
   text-align: center;
 }
@@ -96,6 +133,7 @@ a {
 .features__item_grey {
   background-color: #eee;
   padding: 45px;
+  /* width: 400px; */
 }
 
 .features__item h3 {
@@ -108,7 +146,6 @@ a {
 .hero-feature {
   display: flex;
   flex-direction: row;
-  align-items: stretch;
 }
 
 .hero-feature__content {
@@ -137,15 +174,16 @@ a {
 }
 /* Features: Icon features */
 .icon-features {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 400px;
   background-color: #fff;
   color: #333;
   width: 100%;
 }
 
 .icon-features__item {
-  padding: 50px;
+  padding: 45px;
   padding-top: 120px;
 }
 
@@ -311,21 +349,13 @@ a {
 
 /* Футер */
 .main-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
   color: #000;
   background-color: #fff;
-  padding: 35px;
-  /* Почему отталкиваются боковые границы белого фона? */
-}
-
-.social {
-  display: inline;
-}
-
-.social ul {
-  display: inline-block;
-  list-style: none;
-  vertical-align: middle;
-  text-align: center;
+  padding: 35px 100px;
 }
 
 .social li {
@@ -343,17 +373,14 @@ a {
 }
 
 .hashtag {
-  display: inline-block;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  vertical-align: middle;
 }
 
-.copyright {
-  display: inline-block;
-  text-align: right;
+.copyright a {
   vertical-align: middle;
+  margin-left: 7px;
 }
 
 .academy-link {
@@ -506,12 +533,10 @@ a {
 
 /* Результаты поиска */
 
-.search-results {
-}
-
 .hotels {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .hotels__item {
@@ -569,6 +594,16 @@ a {
 
 .rating__user-rating {
   display: block;
+}
+
+.hotel-single__type,
+.hotel-single__price {
+  position: absolute;
+  top: 60px;
+}
+
+.hotel-single__price {
+  margin-left: 100px;
 }
 
 .hotel-single__buttons {
