@@ -40,7 +40,7 @@ a {
   align-items: center;
 }
 
-.menu li {
+.menu .menu__item {
   display: inline;
 }
 
@@ -56,23 +56,23 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.menu li:nth-child(1) {
+.menu .menu__item:nth-child(1) {
   order: 3;
 }
 
-.menu li:nth-child(2) {
+.menu .menu__item:nth-child(2) {
   order: 1;
 }
 
-.menu li:nth-child(3) {
+.menu .menu__item:nth-child(3) {
   order: 2;
 }
 
-.menu li:nth-child(4) {
+.menu .menu__item:nth-child(4) {
   order: 4;
 }
 
-.menu li:nth-child(5) {
+.menu .menu__item:nth-child(5) {
   order: 5;
 }
 
@@ -91,7 +91,7 @@ a {
               #205778;
 }
 
-.intro img {
+.intro .intro__welcome {
   display: block;
   margin: 0 auto;
   padding-top: 75px;
@@ -102,7 +102,7 @@ a {
   text-align: center;
 }
 
-.lead b {
+.lead__define {
   margin-top: 57px;
   color: #000;
   font-weight: 700;
@@ -145,7 +145,7 @@ a {
 
 .hero-feature {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
 }
 
 .hero-feature__content {
@@ -250,23 +250,19 @@ a {
 }
 
 .book-input {
-  text-align: left;
-  display: block;
+  display: flex;
+  align-items: center;
   margin-bottom: 30px;
   font-weight: 700;
 }
 
 .book-input label {
-  display: inline-block;
-  text-align: left;
-  margin-left: 0;
   width: 100px;
-  margin: 0;
+  text-align: left;
+  margin-right: auto;
 }
 
 .book-input input {
-  display: inline-block;
-  box-sizing: border-box;
   width: 320px;
 }
 
@@ -281,19 +277,19 @@ a {
 
 .book-input input,
 .book-input button {
+  box-sizing: border-box;
   height: 38px;
   background-color: #F2F2F2;
-  border: 0;
   text-transform: uppercase;
   font-weight: 700;
   padding: 0 0 0 13px;
+  outline: none;
+  border: 2px solid transparent;
 }
 
 .book-input button {
   width: 38px;
   padding: 0;
-  margin-right: -4px;
-  margin-left: -4px;
   color: #A9A9A9;
 }
 
@@ -303,6 +299,19 @@ a {
 
 .book-input button:active {
   color: #81B3D2;
+}
+
+.two-columns {
+  display: flex;
+}
+
+.two-columns .book-input {
+  flex-grow: 1;
+}
+
+.book-input label[for="children"] {
+  padding-left: 40px;
+  width: 30px;
 }
 
 .book-input__date {
@@ -319,10 +328,6 @@ a {
 
 .book-input .book-input__quantity {
   width: 38px;
-}
-
-.two-columns {
-  display: inline-block;
 }
 
 .booking-form__button {

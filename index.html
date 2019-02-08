@@ -11,27 +11,27 @@
     <header class="main-header">
       <nav class="main-navigation">
         <ul class="menu">
-          <li class="main-header__logo">
+          <li class="menu__item main-header__logo">
             <a>
               <img src="img/logo.png" width="138" height="71" alt="Логотип города Седона" />
             </a>
           </li>
-          <li><a href="info.html">Информация</a></li>
-          <li><a href="media.html">Фото и видео</a></li>
-          <li><a href="staff.html">Карта штата</a></li>
-          <li><a href="hotels.html">Гостиницы</a></li>
+          <li class="menu__item"><a href="info.html">Информация</a></li>
+          <li class="menu__item"><a href="media.html">Фото и видео</a></li>
+          <li class="menu__item"><a href="staff.html">Карта штата</a></li>
+          <li class="menu__item"><a href="hotels.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
     <main class="container">
       <h1 class="visually-hidden">Город Седона, штат Аризона</h1>
       <div class="intro">
-        <img src="img/hero_welcome.png" width="458" height="352" alt="Добро пожаловать в Седону" />
+        <img class="intro__welcome" src="img/hero_welcome.png" width="458" height="352" alt="Добро пожаловать в Седону" />
       </div>
       <section class="about">
         <div class="lead">
           <h2 class="visually-hidden">О Седоне</h2>
-          <b>Седона — небольшой городок в Аризоне, заслуживающий большего! </b>
+          <p><b class="lead__define">Седона — небольшой городок в Аризоне, заслуживающий большего! </b></p>
           <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </div>
         <ol class="features">
@@ -103,18 +103,20 @@
               <label for="date-checkout">Дата выезда:</label>
               <input class="book-input__date" type="text" id="date-checkout" name="date-checkout" placeholder="9 февраля 2019">
             </span>
-            <span class="book-input two-columns">
-              <label for="adults">Взрослые:</label>
-              <button class="book-input__button" type="button">-</button>
-              <input class="book-input__quantity" type="number" step="1" min="1" value="1" name="adults" id="adults">
-              <button class="book-input__button" type="button">+</button>
-            </span>
-            <span class="book-input two-columns">
-              <label for="children">Дети:</label>
-              <button class="book-input__button" type="button">-</button>
-              <input class="book-input__quantity" type="number" step="1" min="0" value="0" name="children" id="children">
-              <button class="book-input__button" type="button">+</button>
-            </span>
+            <div class="two-columns">
+              <span class="book-input">
+                <label for="adults">Взрослые:</label>
+                <button class="book-input__button" type="button">-</button>
+                <input class="book-input__quantity" type="number" step="1" min="1" value="1" name="adults" id="adults">
+                <button class="book-input__button" type="button">+</button>
+              </span>
+              <span class="book-input">
+                <label for="children">Дети:</label>
+                <button class="book-input__button" type="button">-</button>
+                <input class="book-input__quantity" type="number" step="1" min="0" value="0" name="children" id="children">
+                <button class="book-input__button" type="button">+</button>
+              </span>
+            </div>
             <button class="booking-form__button" type="submit">Найти
             </button>
           </form>
