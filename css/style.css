@@ -573,12 +573,8 @@ a {
 }
 
 .hotel-single__image {
+  display: flex;
   margin-right: 30px;
-  margin-top: auto;
-}
-
-.hotel-single > a {
-  height: 90px;
 }
 
 .hotel-single__descr {
@@ -610,7 +606,7 @@ a {
   display: flex;
 }
 
-.hotel-single__type {
+.details__type {
   width: 110px;
 }
 
