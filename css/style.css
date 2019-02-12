@@ -23,23 +23,24 @@ a {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  width: 90%;
   background-color: #fff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
 }
 
 /* Menu */
 .menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .menu .menu__item {
-  display: inline;
+  flex-basis: 250px;
+  max-width: 250px;
+  text-align: center;
 }
 
 .menu a {
@@ -56,6 +57,7 @@ a {
 
 .menu .menu__item:nth-child(1) {
   order: 3;
+  margin-bottom: -24px;
 }
 
 .menu .menu__item:nth-child(2) {
@@ -82,10 +84,10 @@ a {
 
 /* Landing Main content */
 .intro {
-  min-height: 500px;
+  min-height: 508px;
   background-color: black;
   background: url("../img/hero_bg-bottom.png") no-repeat bottom,
-              url("../img/hero_bg.jpg") no-repeat 50% 22%,
+              url("../img/hero_bg.jpg") no-repeat 50% 21%,
               #205778;
 }
 
@@ -96,20 +98,21 @@ a {
 }
 
 .lead {
-  padding: 58px 0 50px 0;
+  padding: 47px 0 23px;
   text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .lead__define {
-  margin-top: 57px;
   color: #000;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
 }
 
-.lead p {
-  margin-top: 31px;
+.lead__text {
+  margin-top: 22px;
 }
 
 /* Features */
@@ -129,6 +132,14 @@ a {
   text-align: center;
   flex-grow: 1;
   flex-basis: 300px;
+  line-height: 21px;
+}
+
+.features__header {
+  color: #000;
+  font-weight: 700;
+  font-size: 21px;
+  margin-bottom: 23px;
 }
 
 .features-grey {
@@ -137,14 +148,13 @@ a {
 
 .features-grey__item {
   background-color: #eee;
-  padding: 45px;
+  padding: 26px 70px 45px;
+  flex-basis: 300px;
+  flex-grow: 1;
 }
 
-.features__item h3 {
-  color: #000;
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 26px;
+.features-grey__item .features__text {
+  margin-top: 21px;
 }
 
 .hero-feature {
@@ -152,18 +162,26 @@ a {
 }
 
 .hero-feature__content {
-  width: 30%;
-  padding: 45px;
+  width: 300px;
+  padding: 27px 50px 45px;
   background-color: #81B3D2;
   color: #fff;
+  line-height: 21px;
 }
 
-.hero-feature__content h3 {
+.hero-single .hero-single__header {
   color: #fff;
+  font-weight: 700;
+  font-size: 21px;
+  margin-bottom: 23px;
+}
+
+.hero-single .hero-single__text {
+  margin-top: 21px;
 }
 
 .hero-feature__bg {
-  width: 70%;
+  flex-grow: 1;
 }
 
 .real-city {
@@ -179,38 +197,42 @@ a {
 .icon-features {
   display: flex;
   justify-content: space-between;
-  flex-basis: 400px;
   background-color: #fff;
   color: #333;
-  width: 100%;
 }
 
 .icon-features__item {
-  padding: 45px;
-  padding-top: 120px;
+  flex-basis: 300px;
+  flex-grow: 1;
+  padding: 141px 50px 68px 50px;
 }
 
 .icon-features__item.icon-living {
-  background: url("../img/feature_icon-house.png") no-repeat 50% 50px;
+  background: url("../img/feature_icon-house.png") no-repeat 50% 60px;
 }
 
 .icon-features__item.icon-food {
-  background: url("../img/feature_icon-food.png") no-repeat 50% 50px;
+  background: url("../img/feature_icon-food.png") no-repeat 50% 61px;
 }
 
 .icon-features__item.icon-gift {
-  background: url("../img/feature_icon-gift.png") no-repeat 50% 50px;
+  background: url("../img/feature_icon-gift.png") no-repeat 50% 56px;
 }
 
 /* Booking */
 .booking {
-  margin: 55px auto 0 auto;
+  margin: 59px auto 0 auto;
   text-align: center;
+  line-height: 24px;
 }
 
-.booking b {
+.booking__catch {
   font-size: 30px;
-  line-height: 46px;
+}
+
+.booking__text {
+  width: 400px;
+  margin: 24px auto 0;
 }
 
 .booking-header {
@@ -221,9 +243,9 @@ a {
 
 .booking-header a {
   display: inline-block;
-  margin-top: 35px;
-  width: 550px;
-  padding: 35px 0;
+  margin-top: 45px;
+  width: 570px;
+  padding: 32px 0 29px;
   color: #fff;
   background-color: #766357;
 }
@@ -238,13 +260,13 @@ a {
 }
 
 .form-container {
-  min-height: 500px;
+  min-height: 472px;
   background: url("../img/map.jpg") no-repeat center/cover,
               #D8D8D8;
 }
 
 .booking-form {
-  width: 550px;
+  width: 570px;
   padding: 55px;
   box-sizing: border-box;
   margin: 0 auto;
@@ -260,13 +282,13 @@ a {
 }
 
 .book-input label {
-  width: 100px;
+  /* width: 100px; */
   text-align: left;
   margin-right: auto;
 }
 
 .book-input input {
-  width: 320px;
+  width: 348px;
 }
 
 .book-input input:hover {
@@ -313,20 +335,20 @@ a {
 }
 
 .book-input label[for="children"] {
-  padding-left: 40px;
+  padding-left: 50px;
   width: 30px;
 }
 
 .book-input__date {
-  background: url("../img/booking_icon-calendar.png") no-repeat 97% 50%;
+  background: url("../img/booking_icon-calendar.png") no-repeat 98% 50%;
 }
 
 .book-input__date:hover {
-  background: url("../img/booking_icon-calendar_hover.png") no-repeat 97% 50%;
+  background: url("../img/booking_icon-calendar_hover.png") no-repeat 98% 50%;
 }
 
 .book-input__date:focus {
-  background: url("../img/booking_icon-calendar_focus.png") no-repeat 97% 50%;
+  background: url("../img/booking_icon-calendar_focus.png") no-repeat 98% 50%;
 }
 
 .book-input .book-input__quantity {
@@ -336,6 +358,7 @@ a {
 .booking-form__button {
   display: block;
   width: 100%;
+  margin: 24px 0 0;
   background-color: #81B3D2;
   border: 0;
   text-transform: uppercase;
@@ -360,30 +383,54 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box;
   color: #000;
   background-color: #fff;
-  padding: 35px 100px;
+  padding: 19px 100px;
+}
+
+.main-footer__social {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.social ul {
+  padding: 0;
+
 }
 
 .social li {
   display: inline;
   list-style: none;
   text-align: center;
-  margin: 3px;
+  margin: 0;
 }
 
 .social__button {
   display: inline-block;
-  background-color: #81B3D2;
   width: 48px;
   height: 48px;
+  background: url("../img/social_sprite.png") no-repeat,
+              #81B3D2;
+}
+
+.social-facebook {
+  background-position: 50% 50%;
+}
+
+.social-youtube {
+  background-position: 100% 50%;
 }
 
 .hashtag {
+  flex-basis: 250px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+}
+
+.copyright {
+  flex-basis: 250px;
+  text-align: right;
 }
 
 .copyright a {
