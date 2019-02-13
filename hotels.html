@@ -29,11 +29,11 @@
         <section class="filters">
           <h2 class="visually-hidden">Подбор отелей по параметрам</h2>
           <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
-            <fieldset>
+            <fieldset class="filter-form__checkboxes">
               <legend>Инфраструктура:</legend>
               <ul class="filter">
                 <li class="filter__option">
-                  <input class="filter__input filter__input_checkbox" type="checkbox" name="pool" id="pool">
+                  <input class="filter__input filter__input_checkbox" type="checkbox" name="pool" id="pool" checked>
                   <label for="pool">Бассейн</label>
                 </li>
                 <li class="filter__option">
@@ -46,12 +46,12 @@
                 </li>
               </ul>
             </fieldset>
-              <fieldset>
+              <fieldset class="filter-form__checkboxes">
                 <legend>Тип жилья:</legend>
                 <ul class="filter">
                   <li class="filter__option">
                     <input class="filter__input filter__input_checkbox" type="checkbox" name="hotel" id="hotel">
-                    <label for="hotel">Отель</label>
+                    <label for="hotel">Гостиница</label>
                   </li>
                   <li class="filter__option">
                     <input class="filter__input filter__input_checkbox" type="checkbox" name="motel" id="motel">
@@ -59,7 +59,7 @@
                   </li>
                   <li class="filter__option">
                     <input class="filter__input filter__input_checkbox" type="checkbox" name="apartment" id="apartment">
-                    <label for="apartment">Квартира</label>
+                    <label for="apartment">Апартаменты</label>
                   </li>
                 </ul>
               </fieldset>

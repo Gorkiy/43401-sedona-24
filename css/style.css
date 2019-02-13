@@ -453,9 +453,9 @@ a {
 /* Стили страницы отелей */
 
 .filters {
-  background: url("../img/filter_bg.jpg") no-repeat center/cover,
+  background: url("../img/filter_bg.jpg") no-repeat 100% 16% / cover,
   #226287;
-  padding: 30px 70px 30px 70px;
+  padding: 28px 70px 0 70px;
 }
 
 .filter-form {
@@ -464,15 +464,11 @@ a {
 
 .filter {
   list-style: none;
-  line-height: 36px;
+  line-height: 46px;
+  position: relative;
   padding: 0;
-}
-
-.filter-form__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: auto;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .filter-form fieldset {
@@ -481,7 +477,7 @@ a {
 }
 
 .filter-form > fieldset {
-  flex-basis: 240px;
+  flex-basis: 230px;
 }
 
 .filter-form legend {
@@ -490,9 +486,54 @@ a {
   font-weight: 700;
 }
 
+.filter-form__checkboxes legend {
+  margin-left: -10px;
+}
+
+.filter__option {
+  position: relative;
+}
+
+.filter__input_checkbox {
+  display: none;
+}
+
+.filter__option label {
+  padding-left: 28px;
+}
+
+.filter__option label::before {
+  display: inline-block;
+  left: -10px;
+  top: 10px;
+  position: absolute;
+  content: "";
+  width: 28px;
+  height: 24px;
+  background: url("../img/checkbox-off.png");
+}
+
+.filter__input_checkbox:checked ~ .filter__option label::before {
+  background: url("../img/checkbox-on.png");
+}
+
+/* Range slider */
+.filter-form__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  padding: 0;
+}
+
+.filter-form__container fieldset {
+  padding: 0;
+}
+
 .price-controls {
   position: relative;
-  height: 36px;
+  height: 32px;
+  margin-top: 8px;
   margin-bottom: 20px;
   font-size: 0;
   border: 2px solid #ffffff;
@@ -513,15 +554,15 @@ a {
 .price-controls label {
   display: inline-block;
   font-size: 14px;
-  line-height: 38px;
+  line-height: 33px;
   vertical-align: top;
   cursor: pointer;
 }
 
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 90px;
-  padding-left: 65px;
+  width: 96px;
+  padding-left: 60px;
 }
 
 .price-controls input {
@@ -574,15 +615,15 @@ a {
 }
 
 .filter__button {
-  margin-top: -10px;
+  margin-top: 0px;
   background: transparent;
   font-size: 14px;
   line-height: 21px;
   color: #fff;
   text-transform: uppercase;
-  padding: 7px 35px;
+  padding: 6px 20px;
   border: 2px solid #fff;
-  width: 160px;
+  min-width: 150px;
 }
 
 .filter__button:hover {
@@ -596,7 +637,7 @@ a {
 /* Сортировка по результатам */
 .filter-sort {
   position: relative;
-  padding: 38px 0 38px 70px;
+  padding: 30px 0 28px 70px;
   border-bottom: 1px solid #E5E5E5;
 }
 
@@ -607,7 +648,7 @@ a {
 
 .sort-type li {
   display: inline;
-  margin-right: 50px;
+  margin-right: 24px;
 }
 
 .sort-type__item a {
@@ -615,6 +656,7 @@ a {
   line-height: 18px;
   color: #B1B1B1;
   text-decoration: underline;
+  text-decoration-style: dotted;
 }
 
 .sort-type__item a:hover {
@@ -638,7 +680,7 @@ a {
 }
 
 .filter-sort__header {
-  margin-left: 50px;
+  margin-left: 45px;
   font-size: 12px;
   line-height: 18px;
 }
@@ -646,7 +688,7 @@ a {
 .filter-sort__arrows {
   display: inline-block;
   position: absolute;
-  right: 80px;
+  right: 70px;
 }
 
 .filter-sort__arrows a {
@@ -695,13 +737,13 @@ a {
 
 .hotels__item {
   display: flex;
-  padding: 30px 70px;
+  padding: 30px 72px;
   border-bottom: 1px solid #E5E5E5;
 }
 
 .hotel-single__image {
   display: flex;
-  margin-right: 30px;
+  margin-right: 32px;
 }
 
 .hotel-single__descr {
@@ -710,8 +752,8 @@ a {
 }
 
 .hotel-single__descr h3 {
-  margin-top: 0;
-  margin-bottom: 7px;
+  margin-top: -3px;
+  margin-bottom: 2px;
 }
 
 .hotel-single__header {
@@ -734,7 +776,7 @@ a {
 }
 
 .details__type {
-  width: 110px;
+  width: 115px;
 }
 
 .hotel-single__buttons {
@@ -746,7 +788,8 @@ a {
   display: inline;
   font-weight: 700;
   color: #fff;
-  padding: 5px 15px;
+  padding: 5px 16px;
+  margin-right: 3px;
 }
 
 .hotels__button_learn-more {
@@ -788,11 +831,13 @@ a {
   list-style: none;
   padding: 0;
   color: #81B3D2;
-  font-size: 20px;
+  font-size: 24px;
+  line-height: 18px;
 }
 
 .rating__hotel-stars li {
   display: inline;
+  margin-right: -1px;
 }
 
 .rating__user-rating {
