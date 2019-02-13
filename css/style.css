@@ -468,10 +468,11 @@ a {
   padding: 0;
 }
 
-.filter-form__action-wrapper {
+.filter-form__container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: auto;
 }
 
 .filter-form fieldset {
@@ -483,19 +484,98 @@ a {
   flex-basis: 240px;
 }
 
-.filter-form__action-wrapper {
-  margin-left: auto;
-}
-
 .filter-form legend {
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
 }
 
-.filter__button {
-  margin-top: 35px;
+.price-controls {
+  position: relative;
+  height: 36px;
+  margin-bottom: 20px;
+  font-size: 0;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 22px;
+  background: #ffffff;
+}
+
+.price-controls label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+  color: inherit;
+  line-height: 21px;
   background: none;
+  border: none;
+}
+
+.range-slider {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.range-slider__scale {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-slider__bar {
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+}
+
+.range-slider__toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-slider__toggle:hover {
+  background: #1c4f80;
+}
+
+.range-slider__toggle_min {
+  left: 0;
+}
+
+.range-slider__toggle_max {
+  left: 80%;
+}
+
+.filter__button {
+  margin-top: -10px;
+  background: transparent;
   font-size: 14px;
   line-height: 21px;
   color: #fff;

@@ -63,10 +63,21 @@
                   </li>
                 </ul>
               </fieldset>
-              <div class="filter-form__action-wrapper">
+              <div class="filter-form__container">
               <fieldset>
                 <legend>Стоимость в сутки (₽):</legend>
-                <input type="range" min="0" max="3000" value="1000" step="100" class="filter__slider" id="filter-price">
+                <div class="filter-form__price-controls price-controls">
+                  <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                  <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+                </div>
+                <div class="filter-form__range-slider range-slider">
+                  <div class="range-slider__scale">
+                    <div class="range-slider__bar"></div>
+                  </div>
+                  <div class="range-slider__toggle range-slider__toggle_min"></div>
+                  <div class="range-slider__toggle range-slider__toggle_max"></div>
+                </div>
+                <!-- <input type="range" min="0" max="3000" value="1000" step="100" class="filter__slider" id="filter-price"> -->
               </fieldset>
               <button class="filter__button" type="submit">Показать
               </button>
@@ -181,9 +192,9 @@
         <p class="main-footer__hashtag hashtag">#visitSEDONA</p>
         <div class="main-footer__social social">
           <ul>
-            <li><a class="social__button" href="#">Твиттер</a></li>
-            <li><a class="social__button" href="#">Фейсбук</a></li>
-            <li><a class="social__button" href="#">Ютьюб</a></li>
+            <li><a class="social__button social-twitter" href="#"><span class="visually-hidden">Твиттер</span></a></li>
+            <li><a class="social__button social-facebook" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+            <li><a class="social__button social-youtube" href="#"><span class="visually-hidden">Ютьюб</span></a></li>
           </ul>
         </div>
         <p class="main-footer__copyright copyright">
