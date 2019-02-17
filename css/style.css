@@ -513,7 +513,7 @@ a {
   background: url("../img/checkbox-off.png");
 }
 
-.filter__input_checkbox:checked ~ .filter__option label::before {
+.filter__input_checkbox:checked ~ label::before {
   background: url("../img/checkbox-on.png");
 }
 
