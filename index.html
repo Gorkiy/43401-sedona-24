@@ -11,12 +11,10 @@
     <div class="container">
       <header class="main-header">
         <nav class="main-navigation">
+          <a class="main-header__logo">
+            <img src="img/logo.png" width="138" height="71" alt="Логотип города Седона" />
+          </a>
           <ul class="menu">
-            <li class="menu__item main-header__logo">
-              <a>
-                <img src="img/logo.png" width="138" height="71" alt="Логотип города Седона" />
-              </a>
-            </li>
             <li class="menu__item"><a href="info.html">Информация</a></li>
             <li class="menu__item"><a href="media.html">Фото и видео</a></li>
             <li class="menu__item"><a href="staff.html">Карта штата</a></li>
@@ -93,30 +91,34 @@
           <h2 class="visually-hidden">Бронирование гостиницы в Седоне</h2>
           <b class="booking__catch">Заинтересовались?</b>
           <p class="booking__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-          <h3 class="booking-header">
-            <a href="#">Поиск гостиницы в седоне</a>
-          </h3>
+
+          <label for="booking" class="booking-header">Поиск гостиницы в Седоне</label>
+          <input class="booking-header__toggle visually-hidden" type="checkbox" name="booking" id="booking">
+
+
           <div class="form-container">
             <form class="booking-form" method="post" action="https://echo.htmlacademy.ru">
               <span class="book-input">
                 <label for="date-checkin">Дата заезда:</label>
                 <input class="book-input__date" type="text" id="date-checkin" name="date-checkin" value="2 февраля 2019">
+                <span class="icon-date"></span>
               </span>
               <span class="book-input">
                 <label for="date-checkout">Дата выезда:</label>
                 <input class="book-input__date" type="text" id="date-checkout" name="date-checkout" placeholder="9 февраля 2019">
+                <span class="icon-date"></span>
               </span>
               <div class="two-columns">
                 <span class="book-input">
                   <label for="adults">Взрослые:</label>
                   <button class="book-input__button" type="button">-</button>
-                  <input class="book-input__quantity" type="number" step="1" min="1" value="1" name="adults" id="adults">
+                  <input class="book-input__quantity" type="text" value="1" name="adults" id="adults">
                   <button class="book-input__button" type="button">+</button>
                 </span>
                 <span class="book-input">
                   <label for="children">Дети:</label>
                   <button class="book-input__button" type="button">-</button>
-                  <input class="book-input__quantity" type="number" step="1" min="0" value="0" name="children" id="children">
+                  <input class="book-input__quantity" type="text" value="0" name="children" id="children">
                   <button class="book-input__button" type="button">+</button>
                 </span>
               </div>
@@ -137,7 +139,7 @@
         </div>
         <p class="main-footer__copyright copyright">
           <b>Website by:</b>
-          <a class="academy-link" href="https://htmlacademy.ru">HTML Academy</a>
+          <a class="academy-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
         </p>
       </footer>
     </div>

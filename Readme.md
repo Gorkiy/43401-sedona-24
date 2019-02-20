@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Петр Яковлев](https://up.htmlacademy.ru/htmlcss/24/user/43401).
-* Наставник: [Даниил Сташевский](https://htmlacademy.ru/profile/id956755).
+* Наставник: [Александр Тубольцев](https://htmlacademy.ru/profile/id86460).
 
 ---
 
