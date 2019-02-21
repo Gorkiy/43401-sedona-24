@@ -58,6 +58,7 @@ a {
 
 .menu a {
   color: #000;
+  font-weight: 700;
 }
 
 .menu a:hover {
@@ -267,10 +268,20 @@ a {
   font-size: 21px;
   line-height: 26px;
   margin-top: 45px;
+  font-weight: 700;
   width: 570px;
   padding: 32px 0 29px;
   color: #fff;
   background-color: #766357;
+}
+
+.booking-header:hover {
+  background-color: #604E43;
+}
+
+.booking-header:active {
+  background-color: #503E33;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .booking-header__toggle:checked ~ .form-container > .booking-form {
@@ -429,14 +440,15 @@ a {
           align-items: center;
   color: #000;
   background-color: #fff;
-  padding: 22px 100px;
+  padding: 22px 0;
 }
 
-.main-footer__social {
+.main-footer__hashtag,
+.main-footer__social,
+.main-footer__copyright {
+  -ms-flex-preferred-size: 400px;
+      flex-basis: 400px;
   text-align: center;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
 }
 
 .social ul {
@@ -485,17 +497,12 @@ a {
 }
 
 .hashtag {
-  -ms-flex-preferred-size: 250px;
-      flex-basis: 250px;
   font-size: 21px;
   line-height: 26px;
-  font-weight: 700;
 }
 
 .copyright {
-  -ms-flex-preferred-size: 250px;
-      flex-basis: 250px;
-  text-align: right;
+  font-weight: 300;
 }
 
 .copyright a {
@@ -520,7 +527,7 @@ a {
 .filters {
   background: url("../img/filter_bg.jpg") no-repeat 100% 16% / cover,
   #226287;
-  padding: 28px 70px 0 70px;
+  padding: 28px 70px 0 80px;
 }
 
 .filter-form {
@@ -534,18 +541,20 @@ a {
   line-height: 46px;
   position: relative;
   padding: 0;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 12px;
+  margin-bottom: 18px;
 }
 
 .filter-form fieldset {
   border: none;
   color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 .filter-form > fieldset {
-  -ms-flex-preferred-size: 230px;
-      flex-basis: 230px;
+  -ms-flex-preferred-size: 260px;
+      flex-basis: 260px;
 }
 
 .filter-form legend {
@@ -564,13 +573,14 @@ a {
 
 .filter__option label {
   padding-left: 28px;
+  min-height: 34px;
 }
 
 .filter__option label::before {
   display: inline-block;
   vertical-align: middle;
-  left: -10px;
-  top: 10px;
+  left: -11px;
+  top: 11px;
   position: absolute;
   content: "";
   width: 28px;
@@ -932,6 +942,17 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.rating__stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.rating__stars img {
+  margin-left: 3px;
+  margin-top: -2px;
 }
 
 .rating__hotel-stars {
