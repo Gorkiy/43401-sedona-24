@@ -36,13 +36,15 @@ a {
   list-style: none;
   margin: 0;
   padding: 15px 30px;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .menu .menu__item {
   -ms-flex-preferred-size: 25%;
       flex-basis: 25%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .main-header__logo {
@@ -405,7 +407,8 @@ a {
   position: absolute;
   top: 50%;
   right: 0;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   fill: #A9A9A9;
 }
 
@@ -525,11 +528,18 @@ a {
 .main-footer__copyright {
   padding: 0;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-left: auto;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .academy-link {
@@ -685,7 +695,8 @@ a {
 .price-controls .max-price
  {
   width: 158px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .min-price {
