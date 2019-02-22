@@ -522,18 +522,22 @@ a {
 
 .academy-link {
   padding-top: 0;
-  border: 1px solid red;
   margin-left: 7px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.academy-link:hover {
-
+.academy-link svg {
+  display: block;
+  fill: #231F20;
 }
 
-.academy-link:active {
+.academy-link:hover > svg {
+  fill: #81B3D2;
+}
 
+.academy-link:active > svg {
+  fill: #BDBBBC;
 }
 
 /* Стили страницы отелей */
