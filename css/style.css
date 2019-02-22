@@ -41,9 +41,8 @@ a {
 }
 
 .menu .menu__item {
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
-    -webkit-box-sizing: border-box;
+  width: 25%;
+    -webkit-box-sizinА вg: border-box;
             box-sizing: border-box;
 }
 
@@ -133,16 +132,6 @@ a {
 .features-grey {
   list-style: none;
   padding: 0;
-}
-
-.features {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .features__item {
