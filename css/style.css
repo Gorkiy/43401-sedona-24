@@ -473,13 +473,14 @@ a {
 
 .social ul {
   padding: 0;
-
 }
 
 .social li {
-  display: inline;
+  display: inline-block;
+  vertical-align: middle;
   list-style: none;
-  text-align: center;
+  margin-right: 1px;
+  background-color: #81B3D2;
 }
 
 .social__button {
@@ -487,8 +488,21 @@ a {
   vertical-align: middle;
   width: 48px;
   height: 48px;
-  background: url("../img/social_sprite.png") no-repeat,
-              #81B3D2;
+}
+
+.social__button.social-twitter {
+    background: url("../img/social_twitter.svg") no-repeat center,
+    #81B3D2;
+}
+
+.social__button.social-facebook {
+    background: url("../img/social_fb.svg") no-repeat center,
+    #81B3D2;
+}
+
+.social__button.social-youtube {
+    background: url("../img/social_youtube.svg") no-repeat center,
+    #81B3D2;
 }
 
 .social__button:hover {
@@ -496,24 +510,7 @@ a {
 }
 
 .social__button:focus {
-  background-color: #5496BD;
-}
-
-.social__button:focus.social-facebook,
-.social__button:focus.social-twitter,
-.social__button:focus.social-youtube {
-    background: url("../img/social_sprite-hover.png") no-repeat,
-                #669EC0;
-}
-
-.social-facebook,
-.social__button:focus.social-facebook {
-  background-position: 50% 50%;
-}
-
-.social-youtube,
-.social__button:focus.social-youtube {
-  background-position: 100% 50%;
+  opacity: .3;
 }
 
 .hashtag {
