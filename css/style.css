@@ -818,33 +818,25 @@ a {
   margin-left: 10px;
 }
 
-.filter-sort__arrows .down-button {
-  background: url("../img/sort_down.png") no-repeat center/contain;
+.down-button svg,
+.up-button svg {
+  display: block;
+  fill: #CACACA;
 }
 
-.filter-sort__arrows .down-button:hover {
-  background: url("../img/sort_down_hover.png") no-repeat center/contain;
+.down-button:hover svg,
+.up-button:hover svg {
+  fill: #000;
 }
 
-.filter-sort__arrows .down-button:active {
-  background: url("../img/sort_down_active.png") no-repeat center/contain;
+.down-button:active svg,
+.up-button:active svg {
+  fill: #81B3D2;
 }
 
-.filter-sort__arrows .up-button {
-  background: url("../img/sort_up.png") no-repeat center/contain;
-}
-
-.filter-sort__arrows .up-button:hover {
-  background: url("../img/sort_up_hover.png") no-repeat center/contain;
-}
-
-.filter-sort__arrows .up-button:active {
-  background: url("../img/sort_up_active.png") no-repeat center/contain;
-}
-
-.filter-sort__arrows .cur-active {
+.filter-sort__arrows .cur-active > svg {
   pointer-events: none;
-  background: url("../img/sort_down_active.png") no-repeat center/contain;
+  fill: #CACACA;
 }
 
 /* Результаты поиска */
