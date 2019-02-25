@@ -276,9 +276,18 @@ a {
 }
 
 .form-container {
+  position: relative;
   min-height: 472px;
   background: url("../img/map.jpg") no-repeat center/cover,
               #D8D8D8;
+}
+
+.form-container iframe {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  border: 0;
 }
 
 .booking-form {
