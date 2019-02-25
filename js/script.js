@@ -4,6 +4,8 @@ const checkoutDate = form.querySelector('input[name="date-checkout"]');
 const adults = form.querySelector('input[id="adults"]');
 const children = form.querySelector('input[id="children"]');
 
+const buttonShowForm = document.querySelector('.booking__button-map');
+
 let isStorageSupport = true;
 let storage = '';
 try {
@@ -24,3 +26,7 @@ form.addEventListener('submit', event => {
     }
   }
 })
+
+buttonShowForm.addEventListener('click', event => {
+  form.classList.toggle('modal-show');
+});

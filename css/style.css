@@ -21,7 +21,7 @@ a {
 }
 
 .container {
-  max-width: 1200px;
+  width: 1200px;
   margin: 0 auto;
   background-color: #fff;
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
@@ -138,14 +138,12 @@ a {
 }
 
 .features__item {
-  text-align: center;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-preferred-size: 300px;
-      flex-basis: 300px;
+  width: 400px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font: inherit;
   line-height: 21px;
+  text-align: center;
 }
 
 .features__header {
@@ -163,6 +161,10 @@ a {
   margin-top: 21px;
 }
 
+.features__item_hero {
+  flex-basis: 100%;
+}
+
 .hero-single {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -173,7 +175,7 @@ a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 400px;
-  padding: 27px 50px 45px;
+  padding: 27px 47px 45px;
   background-color: #81B3D2;
   font: inherit;
   color: #fff;
@@ -181,9 +183,6 @@ a {
 
 .hero-single__bg {
   width: 800px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
 }
 
 .hero-single__bg_real-city {
@@ -198,23 +197,12 @@ a {
 
 .features__item_grey {
   background-color: #eee;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 26px 65px 45px;
+  padding: 27px 65px 45px;
   width: 400px;
   max-width: 400px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
 }
 
 .features__item_icon {
-  width: 400px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   padding: 141px 50px 68px 50px;
 }
 
@@ -260,13 +248,14 @@ a {
 }
 
 .booking__text {
-  width: 400px;
   margin: 24px auto 0;
 }
 
-.booking-header {
+.booking__button-map {
   display: block;
+  border: 0;
   margin: 0 auto;
+  text-transform: uppercase;
   font-size: 21px;
   line-height: 26px;
   margin-top: 45px;
@@ -277,17 +266,13 @@ a {
   background-color: #766357;
 }
 
-.booking-header:hover {
+.booking__button-map:hover {
   background-color: #604E43;
 }
 
-.booking-header:active {
+.booking__button-map:active {
   background-color: #503E33;
   color: rgba(255, 255, 255, 0.3);
-}
-
-.booking-header__toggle:checked ~ .form-container > .booking-form {
-  display: none;
 }
 
 .form-container {
@@ -297,8 +282,7 @@ a {
 }
 
 .booking-form {
-  display: block;
-  animation: bounce 0.6s;
+  display: none;
   width: 570px;
   padding: 55px;
   -webkit-box-sizing: border-box;
@@ -307,6 +291,11 @@ a {
   background-color: #fff;
   -webkit-box-shadow: 0px 7px 15px rgba(0, 0, 0, .15);
           box-shadow: 0px 7px 15px rgba(0, 0, 0, .15);
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
 }
 
 .book-input {
