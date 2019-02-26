@@ -1,3 +1,4 @@
+'use strict';
 const form = document.querySelector('.booking-form');
 const checkinDate = form.querySelector('input[name="date-checkin"]');
 const checkoutDate = form.querySelector('input[name="date-checkout"]');
