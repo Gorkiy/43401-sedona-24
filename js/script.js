@@ -19,7 +19,7 @@ try {
 form.addEventListener('submit', event => {
   if (!checkinDate.value || !checkoutDate.value || !adults.value || !children.value) {
     event.preventDefault();
-    console.log('Нужно заполнить все обязательные поля');
+    form.classList.add('modal-error');
   } else {
     if (isStorageSupport) {
       localStorage.setItem('adults', adults.value);
@@ -30,4 +30,5 @@ form.addEventListener('submit', event => {
 
 buttonShowForm.addEventListener('click', event => {
   form.classList.toggle('modal-show');
+  form.classList.remove('modal-error');
 });
