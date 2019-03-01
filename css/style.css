@@ -152,7 +152,7 @@ a {
 }
 
 .features__header {
-  width: 150px;
+  width: 155px;
   margin-left: auto;
   margin-right: auto;
   line-height: 21px;
@@ -808,8 +808,10 @@ a {
 
 .range-slider__toggle:hover {
   background: #1c4f80;
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
+  margin-left: -1px;
+  margin-top: -1px;
 }
 
 .range-slider__toggle_min {
