@@ -18,6 +18,8 @@ try {
 form.addEventListener('submit', function(evt) {
   if (!checkinDate.value || !checkoutDate.value || !adults.value || !children.value) {
     evt.preventDefault();
+    form.classList.remove('modal-error');
+    form.offsetWidth = form.offsetWidth;
     form.classList.add('modal-error');
   } else {
     if (isStorageSupport) {

@@ -554,18 +554,18 @@ a {
 }
 
 .social__button_twitter {
-    background: url("../img/social_twitter.svg") no-repeat center,
-    #81B3D2;
+  background: url("../img/social_twitter.svg") no-repeat center,
+  #81B3D2;
 }
 
 .social__button_facebook {
-    background: url("../img/social_fb.svg") no-repeat center,
-    #81B3D2;
+  background: url("../img/social_fb.svg") no-repeat center,
+  #81B3D2;
 }
 
 .social__button_youtube {
-    background: url("../img/social_youtube.svg") no-repeat center,
-    #81B3D2;
+  background: url("../img/social_youtube.svg") no-repeat center,
+  #81B3D2;
 }
 
 .social__button:hover {
