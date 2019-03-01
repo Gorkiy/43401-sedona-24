@@ -46,6 +46,10 @@ a {
             box-sizing: border-box;
 }
 
+.main-header {
+  position: relative;
+}
+
 .main-header__logo {
   position: absolute;
   left: 50%;
@@ -148,6 +152,9 @@ a {
 }
 
 .features__header {
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
   line-height: 21px;
   font-weight: 700;
   font-size: 21px;
@@ -365,7 +372,7 @@ a {
           animation: shake 0.6s;
 }
 
-.book-input {›
+.book-input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-box;
@@ -618,7 +625,7 @@ a {
 .filters {
   background: url("../img/filter_bg.jpg") no-repeat 100% 16% / cover,
   #226287;
-  padding: 28px 70px 0 80px;
+  padding: 28px 70px 0 70px;
 }
 
 .filter-form {
@@ -655,7 +662,7 @@ a {
 }
 
 .filter-form__checkboxes legend {
-  margin-left: -10px;
+  margin-left: 0;
 }
 
 .filter__option {
@@ -663,18 +670,22 @@ a {
 }
 
 .filter__option label {
-  padding-left: 32px;
+  padding-left: 40px;
   min-height: 34px;
+}
+
+.filter__input_checkbox:focus + label::before {
+  outline: 2px solid rgb(77, 144, 254);
 }
 
 .filter__option label::before {
   display: inline-block;
   vertical-align: middle;
-  left: -9px;
+  left: 0;
   top: 11px;
   position: absolute;
   content: "";
-  width: 28px;
+  width: 26px;
   height: 24px;
   background: url("../img/checkbox-off.svg") no-repeat;
 }
@@ -718,7 +729,6 @@ a {
   font-size: 0;
   border: 2px solid #ffffff;
   border-radius: 2px;
-  /* box-sizing: border-box; */
 }
 
 .price-controls::after {
@@ -798,6 +808,8 @@ a {
 
 .range-slider__toggle:hover {
   background: #1c4f80;
+  width: 5px;
+  height: 5px;
 }
 
 .range-slider__toggle_min {
@@ -941,11 +953,15 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   margin-right: 30px;
 }
 
 .hotel-single__image img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -953,6 +969,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 750px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1033,6 +1050,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

@@ -1,14 +1,13 @@
-'use strict';
-const form = document.querySelector('.booking-form');
-const checkinDate = form.querySelector('input[name="date-checkin"]');
-const checkoutDate = form.querySelector('input[name="date-checkout"]');
-const adults = form.querySelector('input[id="adults"]');
-const children = form.querySelector('input[id="children"]');
+var form = document.querySelector('.booking-form');
+var checkinDate = form.querySelector('input[name="date-checkin"]');
+var checkoutDate = form.querySelector('input[name="date-checkout"]');
+var adults = form.querySelector('input[id="adults"]');
+var children = form.querySelector('input[id="children"]');
 
-const buttonShowForm = document.querySelector('.booking__button-map');
+var buttonShowForm = document.querySelector('.booking__button-map');
 
-let isStorageSupport = true;
-let storage = '';
+var isStorageSupport = true;
+var storage = '';
 try {
   storage = localStorage.getItem('adults');
   storage = localStorage.getItem('children');
@@ -16,9 +15,9 @@ try {
   isStorageSupport = false;
 }
 
-form.addEventListener('submit', event => {
+form.addEventListener('submit', function(evt) {
   if (!checkinDate.value || !checkoutDate.value || !adults.value || !children.value) {
-    event.preventDefault();
+    evt.preventDefault();
     form.classList.add('modal-error');
   } else {
     if (isStorageSupport) {
@@ -28,7 +27,8 @@ form.addEventListener('submit', event => {
   }
 })
 
-buttonShowForm.addEventListener('click', event => {
+buttonShowForm.addEventListener('click', function(evt) {
+  evt.preventDefault();
   form.classList.toggle('modal-show');
   form.classList.remove('modal-error');
 });
